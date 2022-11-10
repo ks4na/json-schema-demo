@@ -1,0 +1,11 @@
+{
+  "$schema": "./schema/cat.schema.json",
+  "breed": "A",
+  "children": [
+    {
+      "name": "default cat name",
+      "age": 1,
+      "breed": "A"
+    }
+  ]
+}

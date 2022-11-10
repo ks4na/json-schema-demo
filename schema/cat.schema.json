@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "cat.schema.json",
+  "title": "Cat",
+  "description": "json schema demo",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "cat's name",
+      "type": "string"
+    },
+    "age": {
+      "description": "cat's age",
+      "type": "integer",
+      "exclusiveMinimum": 0
+    },
+    "breed": {
+      "markdownDescription": "cat's breed, one of `A` | `B` | `C`",
+      "type": "string",
+      "enum": ["A", "B", "C"]
+    },
+    "children": {
+      "description": "children",
+      "type": "array",
+      "items": {
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "age": {
+            "type": "number"
+          },
+          "breed": {
+            "type": "string",
+            "enum": ["A", "B", "C"]
+          }
+        }
+      },
+      "defaultSnippets": [
+        {
+          "label": "demo cat",
+          "description": "auto type a demo cat",
+          "body": [
+            {
+              "name": "default cat name",
+              "age": 1,
+              "breed": "A"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "required": ["name"]
+}
